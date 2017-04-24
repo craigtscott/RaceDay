@@ -1,24 +1,49 @@
-# README
+# Flow
+  1. Head coach creates a route/race
+  2. Head coach adds checkpoints (w/ unique names for race)
+  3. Head coach emails volunteers/coaches to sign up for race (includes race link)
+  4. Head coach emails competitors with link to signup/login
+  5. Volunteers sign up
+  6. Competitors signup and log bib names
+  7. Race starts
+    * volunteer/coach locations auto log
+    * volunteer/coach dropdown for tracks they are in charge of (bicyclists etc.)
+  8. Intervals are logged
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ideas
+  * Checkpoints/Waterstops uniquely named for race
+  * tracks coaches within 10ft
+  * Coach dropdown for what track they are logging
+  * Intervals?
 
-Things you may want to cover:
+# Potential technologies
+  * Rails
+  * React.js
+  * Swyft/React Native
+  * Voice technology
+  * Google Maps
+  * Pacing?
 
-* Ruby version
+# Schema
+  * Races
+    * Name
+    * race Date
+    * head_coach_id
+    * has_many Checkpoints
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    * has_many Competitors
+    * has many Coaches/Volunteers
+    * belongs_ to Head Coach
+    
+  * Checkpoints
+    * race_id
+    * name unique to the race, but not the table
+  * Users
+    * username
+    * password_digest
+    * session_token
+    * has_many races
+    * type
+      * competitor
+      * head coach
+      * coach/volunteer
