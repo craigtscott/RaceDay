@@ -11,10 +11,13 @@
   8. Intervals are logged
 
 # Ideas
-  * Checkpoints/Waterstops uniquely named for race
-  * tracks coaches within 10ft
-  * Coach dropdown for what track they are logging
-  * Intervals?
+  * Backend
+    * Checkpoints/Waterstops uniquely named for race
+    * tracks coaches within 10ft
+    * Coach dropdown for what track they are logging
+    * Intervals?
+  * Frontend
+    * 
 
 # Potential technologies
   * Rails
@@ -47,12 +50,23 @@
     * race_id
     * name unique to the race, but not the table; add race-name to front?
 
-
   * Team
+    * team_name
+    * team_logo
     * has_many races
     * has_many members
     * permissions set
     * person_type: competitor, volunteer, organizer
+
+  * Users
+    * username
+    * name
+    * password_digest
+    * email
+    * phone (optional)
+    * session_token
+    * has_many races through race_org
+    * belongs_to team
 
   * Team Members [Join Table]
     * team_id
@@ -63,18 +77,11 @@
     * user_id
     * race_id
 
-  * Users
-    * username
-    * password_digest
-    * session_token
-    * has_many races through race_org
-    * belongs_to team
-
-  * Permissions
+  <!-- * Permissions
     * organizers
       * set permissions
       * create checkpoints
     * volunteers
       * update competitor checkpoint pass
       * change their checkpoint
-    * competitors
+    * competitors -->
