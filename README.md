@@ -17,22 +17,27 @@
   * Intervals?
 
 # Potential technologies
+  * Rails
+  * React.js
+  * Swyft/React Native
   * Voice technology
   * Google Maps
   * Pacing?
-  * Swyft/React Native
 
 # Schema
   * Races
     * Name
-    * Date
+    * race Date
     * head_coach_id
-    * has_many Competitors
     * has_many Checkpoints
+
+    * has_many Competitors
     * has many Coaches/Volunteers
     * belongs_ to Head Coach
+    
   * Checkpoints
     * race_id
+    * name unique to the race, but not the table
   * Users
     * username
     * password_digest
