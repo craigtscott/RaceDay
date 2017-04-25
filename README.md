@@ -11,13 +11,13 @@
   8. Intervals are logged
 
 # Ideas
-  * Backend
-    * Checkpoints/Waterstops uniquely named for race
-    * tracks coaches within 10ft
-    * Coach dropdown for what track they are logging
-    * Intervals?
-  * Frontend
-    *
+## Backend
+  * Checkpoints/Waterstops uniquely named for race
+  * tracks coaches within 10ft
+  * Coach dropdown for what track they are logging
+  * Intervals?
+## Frontend
+  * users login
 
 # Potential technologies
   * Rails
