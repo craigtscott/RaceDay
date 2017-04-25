@@ -1,17 +1,4 @@
 # Schema
-* Races
-  * Name
-  * Date
-  * track
-  * team_id
-
-  * has_many Checkpoints
-  * has_many Competitors
-  * has many Coaches/Volunteers
-
-  * belongs_to Head Coach/ Organizer
-  * belongs_to team
-  * can't add to race if race has passed
 
 * bib number
   * race_id
@@ -22,17 +9,14 @@
   * race_id
   * name unique to the race, but not the table; add race-name to front?
 
-* Team
-  * team_name
-  * team_logo
-  * has_many races
-  * has_many members
-  * permissions set
-  * person_type: competitor, volunteer, organizer
-
 * Team Members [Join Table]
   * team_id
   * user_id
+  * Team
+    * has_many races
+    * has_many members
+    * permissions set
+    * person_type: competitor, volunteer, organizer
 
 * Race Members [Join Table]
   * team_id
@@ -53,37 +37,26 @@
   has_many races
   has_many teams
 
+  ## races
+  column name      | data type | details
+  -----------------|-----------|--------
+  id               | integer   | not null, primary key
+  name             | string    | not null
+  date             | string    | not null, indexed
+  track            | string    | not null
+  team_id          | string    | not null, unique
+
+  belongs_to team
+
+  has_many checkpoints
+  has_many race_members
 
   ## team
   column name      | data type | details
   -----------------|-----------|--------
   id               | integer   | not null, primary key
   name             | string    | not null, indexed
-  tag_id           | integer   | not null, indexed
-  directions       | text      | not null
-  image_url        | string    | not null
-  user_id          | integer   | not null, indexed
-  ingredients      |text       | not null
+  logo             | string    |
 
   has_many races
-  has_many users
-
-
-
-    ## tags
-    column name      | data type | details
-    -----------------|-----------|--------
-    id               | integer   | not null, primary key
-    name             | string    | not null, indexed
-    img              | string    | not null
-
-    ## comments
-    column name      | data type | details
-    -----------------|-----------|--------
-    id               | integer   | not null, primary key
-    description      | string    | not null, indexed
-    recipe_id        | integer   | not null, indexed
-    user_id          | integer   | not null, indexed
-
-    belongs_to user
-    belongs_to recipe
+  has_many users [through team members]
