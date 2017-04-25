@@ -10,21 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425190135) do
+ActiveRecord::Schema.define(version: 20170425210637) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "remove_broken_columns", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",                                                              null: false
-    t.string   "name",                                                                  null: false
-    t.string   "email",                                                                 null: false
+    t.string   "username",        null: false
+    t.string   "name",            null: false
+    t.string   "email",           null: false
     t.string   "phone"
     t.string   "password_digest"
-    t.datetime "created_at",                                                            null: false
-    t.datetime "updated_at",                                                            null: false
-    t.string   "session_token",                                                         null: false
-    t.string   "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007ffb3e9d1660>", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["name"], name: "index_users_on_name"
-    t.index ["username"], name: "index_users_on_username", unique: true
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "session_token",   null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["name"], name: "index_users_on_name", using: :btree
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
 end

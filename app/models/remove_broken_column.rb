@@ -1,0 +1,2 @@
+class RemoveBrokenColumn < ApplicationRecord
+end
