@@ -12,28 +12,6 @@ session_token    | string    | not null, unique
   * **has_many** races
   * **has_many** teams
 
-## races
-column name      | data type | details
------------------|-----------|--------
-id               | integer   | not null, primary key
-name             | string    | not null
-date             | string    | not null, indexed
-track            | string    | not null
-team_id          | string    | not null, unique
-  * **belongs_to** team
-  * **has_many** checkpoints
-  * **has_many** race_members
-
-## checkpoints
-column name      | data type | details
------------------|-----------|--------
-id               | integer   | not null, primary key
-name             | string    | not_null, indexed
-race_id          | string    | not null, indexed
-coordinates      | string    | not_null
-  * **belongs_to** race
-  * **belongs_to** team [through race]
-
 ## teams
 column name      | data type | details
 -----------------|-----------|--------
@@ -48,9 +26,21 @@ column name      | data type | details
 -----------------|-----------|--------
 id               | integer   | not null, primary key
 team_id          | string    | not null, indexed
-user_id          | string    |
+user_id          | string    | not_null
   * **has_many** races
-  * **has_many** users [through team members]
+  * **has_many** users
+
+## races
+column name      | data type | details
+-----------------|-----------|--------
+id               | integer   | not null, primary key
+name             | string    | not null
+date             | string    | not null, indexed
+track            | string    | not null
+team_id          | string    | not null, unique
+  * **belongs_to** team
+  * **has_many** checkpoints
+  * **has_many** race_members
 
 ## race_members
 column name      | data type | details
@@ -64,3 +54,14 @@ type             | string    | not null, indexed
   * **belongs_to** race
   * **belongs_to** team
   * **has_many** users [through team members]
+
+## checkpoints
+column name      | data type | details
+-----------------|-----------|--------
+id               | integer   | not null, primary key
+name             | string    | not_null, indexed
+race_id          | string    | not null, indexed
+coordinates      | string    | not_null
+place_in_race    | integer   | not_null
+  * **belongs_to** race
+  * **belongs_to** team [through race]
