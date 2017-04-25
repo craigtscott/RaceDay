@@ -1,0 +1,36 @@
+{
+  "name": "Raceday",
+  "version": "1.0.0",
+  "description": "1. Head coach creates a route/race   2. Head coach adds checkpoints (w/ unique names for race)   3. Head coach emails volunteers/coaches to sign up for race (includes race link)   4. Head coach emails competitors with link to signup/login   5. Volunteers sign up   6. Competitors signup and log bib names   7. Race starts     * volunteer/coach locations auto log     * volunteer/coach dropdown for tracks they are in charge of (bicyclists etc.)   8. Intervals are logged",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigtscott/RaceDay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craigtscott/RaceDay/issues"
+  },
+  "homepage": "https://github.com/craigtscott/RaceDay#readme",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0",
+    "webpack": "^2.4.1"
+  }
+}
