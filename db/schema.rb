@@ -10,14 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425210637) do
+ActiveRecord::Schema.define(version: 20170426201813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "checkpoints", force: :cascade do |t|
+    t.string   "name",          null: false
+    t.integer  "race_id",       null: false
+    t.string   "coordinates"
+    t.string   "place_in_race"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["name"], name: "index_checkpoints_on_name", using: :btree
+    t.index ["race_id"], name: "index_checkpoints_on_race_id", using: :btree
+  end
+
+  create_table "race_members", force: :cascade do |t|
+    t.integer  "team_id",    null: false
+    t.integer  "user_id",    null: false
+    t.integer  "race_id",    null: false
+    t.integer  "bib_number", null: false
+    t.string   "type",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bib_number"], name: "index_race_members_on_bib_number", using: :btree
+    t.index ["race_id"], name: "index_race_members_on_race_id", using: :btree
+    t.index ["team_id"], name: "index_race_members_on_team_id", using: :btree
+    t.index ["type"], name: "index_race_members_on_type", using: :btree
+    t.index ["user_id"], name: "index_race_members_on_user_id", using: :btree
+  end
+
   create_table "remove_broken_columns", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "team_members", force: :cascade do |t|
+    t.integer  "team_id",    null: false
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_team_members_on_team_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
