@@ -8,6 +8,7 @@ class CreateCheckpoints < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_index :checkpoints, :name, :race_id
+    add_index :checkpoints, :name
+    add_index :checkpoints, :race_id
   end
 end
