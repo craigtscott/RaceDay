@@ -1,0 +1,2 @@
+class RaceMember < ApplicationRecord
+end
