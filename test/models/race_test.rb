@@ -1,17 +1,19 @@
 # == Schema Information
 #
-# Table name: team_members
+# Table name: races
 #
 #  id         :integer          not null, primary key
+#  name       :string           not null
+#  date       :string           not null
+#  track      :string           not null
 #  team_id    :integer          not null
-#  user_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class TeamMemberTest < ActiveSupport::TestCase
+class RaceTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

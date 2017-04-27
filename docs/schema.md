@@ -34,10 +34,10 @@ user_id          | string    | not_null
 column name      | data type | details
 -----------------|-----------|--------
 id               | integer   | not null, primary key
-name             | string    | not null
+name             | string    | not null, indexed
 date             | string    | not null, indexed
 track            | string    | not null
-team_id          | string    | not null, unique
+team_id          | integer   | not null
   * **belongs_to** team
   * **has_many** checkpoints
   * **has_many** race_members

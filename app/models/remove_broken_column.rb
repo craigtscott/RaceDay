@@ -1,2 +1,0 @@
-class RemoveBrokenColumn < ApplicationRecord
-end
