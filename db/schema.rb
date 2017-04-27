@@ -10,21 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427181402) do
+ActiveRecord::Schema.define(version: 20170427185339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "checkpoints", force: :cascade do |t|
-    t.string   "name",          null: false
-    t.integer  "race_id",       null: false
-    t.string   "coordinates"
-    t.string   "place_in_race"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["name"], name: "index_checkpoints_on_name", using: :btree
-    t.index ["race_id"], name: "index_checkpoints_on_race_id", using: :btree
-  end
 
   create_table "race_members", force: :cascade do |t|
     t.integer  "team_id",    null: false
@@ -58,6 +47,14 @@ ActiveRecord::Schema.define(version: 20170427181402) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["team_id"], name: "index_team_members_on_team_id", using: :btree
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "logo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_teams_on_name", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
