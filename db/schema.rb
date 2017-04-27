@@ -41,11 +41,6 @@ ActiveRecord::Schema.define(version: 20170426201813) do
     t.index ["user_id"], name: "index_race_members_on_user_id", using: :btree
   end
 
-  create_table "remove_broken_columns", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "team_members", force: :cascade do |t|
     t.integer  "team_id",    null: false
     t.integer  "user_id",    null: false
@@ -60,9 +55,9 @@ ActiveRecord::Schema.define(version: 20170426201813) do
     t.string   "email",           null: false
     t.string   "phone"
     t.string   "password_digest"
+    t.string   "session_token",   null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "session_token",   null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["name"], name: "index_users_on_name", using: :btree
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
