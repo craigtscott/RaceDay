@@ -13,5 +13,4 @@ Rails.application.routes.draw do
     resources :races, only: [:create, :destroy, :index]
     resource :session, only: [:create, :destroy]
   end
-
 end
