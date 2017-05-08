@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427185606) do
+ActiveRecord::Schema.define(version: 20170508230644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,17 +27,17 @@ ActiveRecord::Schema.define(version: 20170427185606) do
   end
 
   create_table "race_members", force: :cascade do |t|
-    t.integer  "team_id",    null: false
-    t.integer  "user_id",    null: false
-    t.integer  "race_id",    null: false
-    t.integer  "bib_number", null: false
-    t.string   "type",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "team_id",        null: false
+    t.integer  "user_id",        null: false
+    t.integer  "race_id",        null: false
+    t.integer  "bib_number",     null: false
+    t.string   "classification", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.index ["bib_number"], name: "index_race_members_on_bib_number", using: :btree
+    t.index ["classification"], name: "index_race_members_on_classification", using: :btree
     t.index ["race_id"], name: "index_race_members_on_race_id", using: :btree
     t.index ["team_id"], name: "index_race_members_on_team_id", using: :btree
-    t.index ["type"], name: "index_race_members_on_type", using: :btree
     t.index ["user_id"], name: "index_race_members_on_user_id", using: :btree
   end
 
