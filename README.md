@@ -16,10 +16,20 @@ The Goal that should be reached is that coaches know when/if a team member has p
 # Components
   - Auth
   - User Detail
+    - Shows teams
+    - Shows races ordered by most recent date
   - Race Detail
+    - Shows checkpoints
+    - Shows competitors + bib number
   - Race Index
+    - Shows all races for user
+  - Checkpoint
+    - Shows race name
+    - Shows competitors + bib number
   - Team Detail
-  - Team Index
+    - Shows all team members
+  - Team Index [Bonus]
+    - Shows all teams
 
 # Flow
   1. Head coach creates a route/race
