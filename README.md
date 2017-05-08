@@ -12,17 +12,20 @@
 
 # Ideas
 ## Backend
-  * Checkpoints/Waterstops uniquely named for race
-  * tracks coaches within 10ft
+  * Checkpoints uniquely named for race
+  * Tracks coaches within 10ft
   * Coach dropdown for what track they are logging
   * Intervals?
 ## Frontend
-  * users login
+  * User Component
+  * Race Component
+  * Team Component
 
 # Potential technologies
   * Rails
   * React.js
-  * Swyft/React Native
+  * React Native
+  * Flux
   * Voice technology
   * Google Maps
-  * Pacing?
+  * Pacing
