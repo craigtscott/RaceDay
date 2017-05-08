@@ -6,8 +6,8 @@
   5. Volunteers sign up
   6. Competitors signup and log bib names
   7. Race starts
-    * volunteer/coach locations auto log
-    * volunteer/coach dropdown for tracks they are in charge of (bicyclists etc.)
+      - volunteer/coach locations auto log
+      - volunteer/coach dropdown for tracks they are in charge of (bicyclists etc.)
   8. Intervals are logged
 
 # Ideas
