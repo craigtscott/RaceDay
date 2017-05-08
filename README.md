@@ -14,23 +14,12 @@ The Goal that should be reached is that coaches know when/if a team member has p
   - Interval tracking
   - Tracks coaches within 10ft
 
-## Components
-  - Auth
-  - User Detail
-    - Shows teams
-    - Shows races ordered by most recent date
-  - Race Detail
-    - Shows checkpoints
-    - Shows competitors + bib number
-  - Race Index
-    - Shows all races for user
-  - Checkpoint
-    - Shows race name
-    - Shows competitors + bib number
-  - Team Detail
-    - Shows all team members
-  - Team Index [Bonus]
-    - Shows all teams
+## Design Docs
+  - [Wireframes]()
+  - [React Components]()
+  - [Endpoints]()
+  - [Database Schema](https://github.com/craigtscott/RaceDay/blob/master/docs/schema.md)
+  - [Sample State]()
 
 ## Flow
   1. Head coach creates a route/race
