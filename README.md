@@ -16,10 +16,10 @@ The Goal that should be reached is that coaches know when/if a team member has p
 
 ## Design Docs
   - [Wireframes]()
-  - [React Components]()
-  - [Endpoints]()
+  - [React Components](https://github.com/craigtscott/RaceDay/blob/master/docs/component_hierarchy.md)
+  - [Endpoints](https://github.com/craigtscott/RaceDay/blob/master/docs/api_endpoints.md)
   - [Database Schema](https://github.com/craigtscott/RaceDay/blob/master/docs/schema.md)
-  - [Sample State]()
+  - [Sample State](https://github.com/craigtscott/RaceDay/blob/master/docs/sample_state.md)
 
 ## Flow
   1. Head coach creates a route/race
