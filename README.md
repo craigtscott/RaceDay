@@ -9,9 +9,9 @@ The Goal that should be reached is that coaches know when/if a team member has p
   7. Add checkpoints to a race
   8. Order checkpoints within a race
 
-##  Bonus:
-    - Interval tracking
-    - Tracks coaches within 10ft
+##  Bonus
+  - Interval tracking
+  - Tracks coaches within 10ft
 
 # Components
   - Auth
