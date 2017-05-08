@@ -1,4 +1,5 @@
-# MVP
+# RaceDay!
+## MVP
 The Goal that should be reached is that coaches know when/if a team member has passed the next marker.
   1. User Auth
   2. Production Readme
@@ -9,11 +10,11 @@ The Goal that should be reached is that coaches know when/if a team member has p
   7. Add checkpoints to a race
   8. Order checkpoints within a race
 
-##  Bonus
+###  Bonus
   - Interval tracking
   - Tracks coaches within 10ft
 
-# Components
+## Components
   - Auth
   - User Detail
     - Shows teams
@@ -31,7 +32,7 @@ The Goal that should be reached is that coaches know when/if a team member has p
   - Team Index [Bonus]
     - Shows all teams
 
-# Flow
+## Flow
   1. Head coach creates a route/race
   2. Head coach adds checkpoints (w/ unique names for race)
   3. Head coach emails volunteers/coaches to sign up for race (includes race link)
@@ -43,7 +44,7 @@ The Goal that should be reached is that coaches know when/if a team member has p
       - volunteer/coach dropdown for tracks they are in charge of (bicyclists etc.)
   8. Intervals are logged
 
-# Technology
+## Technology
   * Rails
   * React.js
   * React Native
