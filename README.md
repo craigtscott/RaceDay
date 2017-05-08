@@ -16,12 +16,13 @@
   * Tracks coaches within 10ft
   * Coach dropdown for what track they are logging
   * Intervals?
+
 ## Frontend
   * User Component
   * Race Component
   * Team Component
 
-# Potential technologies
+# Technologies
   * Rails
   * React.js
   * React Native
